@@ -125,11 +125,12 @@
 % }
 % \ExplSyntaxOff
 
-\newcommand{\pagetitle}[1]{%
-	%\shadowcolor{special!25!white}%
-	{\LARGE\textbf{\strut{\colorstring{#1}}}}%
-	%\shadowcolor{black!5!white}%
-}
+ \newcommand{\pagetitle}[1]{%
+% 	\shadowcolor{special!25!white}%
+% 	{\LARGE\textbf{\strut{\colorstring{#1}}}}%
+% 	\shadowcolor{black!5!white}%
+		{\LARGE\color{special!95!black}\textbf{#1}}}%
+% }
 
 \newcommand{\cancel}[2]{%
     \tikz[baseline=(tocancel.base)]{
