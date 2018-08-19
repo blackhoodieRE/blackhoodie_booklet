@@ -10,11 +10,6 @@
 \usepackage{ifoddpage}
 \usepackage{fontawesome}
 
-% \usepackage{fontspec}
-% \setmainfont{DejaVu Sans}
-% \setlength{\lefthyphenmin}{8}
-% \setlength{\righthyphenmin}{8}
-
 \newcommand{\getdefaultbggraphic}{
 	\ifdefined\nobackground
 	\else
@@ -41,7 +36,7 @@
 	\fancyhfoffset[r]{\dimexpr+0.2cm\relax}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
-	\setlength{\headheight}{65pt}
+	\setlength{\headheight}{50pt}
 	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
 	   contents = {\getdefaultbggraphic}}
 }
@@ -52,7 +47,7 @@
 	\fancyfoot[C]{\makebox[\textwidth][c]{--- {\thepage} ---}}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
-	\setlength{\headheight}{65pt}
+	\setlength{\headheight}{35pt}
 	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
 	   contents = {\getdefaultbggraphic}}
 }
