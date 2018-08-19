@@ -12,6 +12,9 @@
 \usepackage{ifoddpage}
 \usepackage{fontawesome}
 
+\usepackage{fontspec}
+\setmainfont{[Fixedsys_Excelsior.ttf]}
+
 \newcommand{\getdefaultbggraphic}{
 	\ifdefined\nobackground
 	\else
@@ -49,7 +52,7 @@
 	\fancyfoot[C]{\makebox[\textwidth][c]{--- {\thepage} ---}}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
-	\setlength{\headheight}{35pt}
+	\setlength{\headheight}{50pt}
 	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
 	   contents = {\getdefaultbggraphic}}
 }
@@ -107,28 +110,28 @@
 % ALTERNATING LETTER COLORS from https://tex.stackexchange.com/a/285974
 % \ExplSyntaxOn
 % \NewDocumentCommand{\colorstring}{O{special!90!white,special!95!black}+m}{%
-%   \clist_set:Nn \l_tmpa_clist {#1}%
-%   \int_zero:N \l_tmpa_int%
-%   \str_set:Nx \l_tmpa_str {#2}%
-%   \int_step_inline:nnnn {1} {1} {\str_count:N \l_tmpa_str } {%
-%     \str_case_x:nnF {\str_item:Nn \l_tmpa_str {##1}} {%
-%       {\space}{\space}
-%     }{%
-%       \int_compare:nNnTF {\l_tmpa_int } < {\clist_count:N \l_tmpa_clist } {
-%         \int_incr:N \l_tmpa_int
-%       }{%
-%         \int_set:Nn \l_tmpa_int {\c_one}
-%       }
-%       \textcolor{\clist_item:Nn \l_tmpa_clist {\l_tmpa_int }}{\hspace{-0.43em}\shadowtext{\str_item:Nn \l_tmpa_str {##1}}}
-%     }
-%   }
+%  \clist_set:Nn \l_tmpa_clist {#1}%
+%  \int_zero:N \l_tmpa_int%
+%  \str_set:Nx \l_tmpa_str {#2}%
+%  \int_step_inline:nnnn {1} {1} {\str_count:N \l_tmpa_str } {%
+%    \str_case_x:nnF {\str_item:Nn \l_tmpa_str {##1}} {%
+%      {\space}{\space}
+%    }{%
+%      \int_compare:nNnTF {\l_tmpa_int } < {\clist_count:N \l_tmpa_clist } {
+%        \int_incr:N \l_tmpa_int
+%      }{%
+%        \int_set:Nn \l_tmpa_int {\c_one}
+%      }
+%      \textcolor{\clist_item:Nn \l_tmpa_clist {\l_tmpa_int }}{\hspace{-0.43em}\shadowtext{\str_item:Nn \l_tmpa_str {##1}}}
+%    }
+%  }
 % }
 % \ExplSyntaxOff
-
- \newcommand{\pagetitle}[1]{%
+%
+\newcommand{\pagetitle}[1]{%
 % 	\shadowcolor{special!25!white}%
-% 	{\LARGE\textbf{\strut{\colorstring{#1}}}}%
-% 	\shadowcolor{black!5!white}%
+%  	{\LARGE\textbf{\strut{\colorstring{#1}}}}%
+%  	\shadowcolor{black!5!white}%
 		{\LARGE\color{special!95!black}\textbf{#1}}}%
 % }
 
