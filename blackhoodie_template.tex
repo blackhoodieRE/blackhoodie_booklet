@@ -105,25 +105,25 @@
 \shadowcolor{black!5!white}
 
 % ALTERNATING LETTER COLORS from https://tex.stackexchange.com/a/285974
-\ExplSyntaxOn
-\NewDocumentCommand{\colorstring}{O{special!90!white,special!95!black}+m}{%
-  \clist_set:Nn \l_tmpa_clist {#1}%
-  \int_zero:N \l_tmpa_int%
-  \str_set:Nx \l_tmpa_str {#2}%
-  \int_step_inline:nnnn {1} {1} {\str_count:N \l_tmpa_str } {%
-    \str_case_x:nnF {\str_item:Nn \l_tmpa_str {##1}} {%
-      {\space}{\space}
-    }{%
-      \int_compare:nNnTF {\l_tmpa_int } < {\clist_count:N \l_tmpa_clist } {
-        \int_incr:N \l_tmpa_int
-      }{%
-        \int_set:Nn \l_tmpa_int {\c_one}
-      }
-      \textcolor{\clist_item:Nn \l_tmpa_clist {\l_tmpa_int }}{\hspace{-0.43em}\shadowtext{\str_item:Nn \l_tmpa_str {##1}}}
-    }
-  }
-}
-\ExplSyntaxOff
+% \ExplSyntaxOn
+% \NewDocumentCommand{\colorstring}{O{special!90!white,special!95!black}+m}{%
+%   \clist_set:Nn \l_tmpa_clist {#1}%
+%   \int_zero:N \l_tmpa_int%
+%   \str_set:Nx \l_tmpa_str {#2}%
+%   \int_step_inline:nnnn {1} {1} {\str_count:N \l_tmpa_str } {%
+%     \str_case_x:nnF {\str_item:Nn \l_tmpa_str {##1}} {%
+%       {\space}{\space}
+%     }{%
+%       \int_compare:nNnTF {\l_tmpa_int } < {\clist_count:N \l_tmpa_clist } {
+%         \int_incr:N \l_tmpa_int
+%       }{%
+%         \int_set:Nn \l_tmpa_int {\c_one}
+%       }
+%       \textcolor{\clist_item:Nn \l_tmpa_clist {\l_tmpa_int }}{\hspace{-0.43em}\shadowtext{\str_item:Nn \l_tmpa_str {##1}}}
+%     }
+%   }
+% }
+% \ExplSyntaxOff
 
 \newcommand{\pagetitle}[1]{%
 	%\shadowcolor{special!25!white}%
