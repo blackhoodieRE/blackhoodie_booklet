@@ -1,0 +1,9 @@
+\def\abstracttitle{Bushwhacking your way around a bootloader}
+\def\abstractcomment{Regular Talk}
+\def\abstractowner{.bx}
+
+\thispagestyle{abstract}
+
+This talk will cover the methods and tools I developed to "reverse engineer" the open source Das U-Boot bootloader, and how they can be applied more generally to as a dynamic analysis technique to correlate interesting events with control flow and ultimately a location in the binary/source code.
+
+Even when you have access to some binary's source code, it can still be challenging to understand said software. In this talk, I will discuss the techniques and I tools I developed in order to understand and navigate the pile of code that is the open-source Das U-Boot bootloader. The tools I developed do not rely on proprietary software and instead make use of free and powerful debugging tools such as Capstone, Unicorn, and the GDB Python plugin API. My approach strives to highlight the temporal and mechanical connections that exist between higher-level behaviors and regions of the code base/binary by instrumenting, tracing, and analyzing all memory writes with respect to the software's current execution path. This technique allows us to develop and test our understanding of the relationships between code and objects (data structures and/or regions of memory). I will demonstrate how these tools and techniques can be used in practice by discussing how they were used to identify and distinguish between different phases of U-Boot execution (including distinct phases of initialization and relocation). This talk aims to be both accessible to software folk who merely want to learn more about bootloaders as well as interesting to those with bootloader and/or reverse-engineering experience.

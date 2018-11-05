@@ -11,6 +11,7 @@
 \usepackage{adjustbox}
 \usepackage{ifoddpage}
 \usepackage{fontawesome}
+\usepackage{pgfpages}
 
 \usepackage{fontspec}
 \setmainfont{[Fixedsys_Excelsior.ttf]}
@@ -41,7 +42,7 @@
 	\fancyhfoffset[r]{\dimexpr+0.2cm\relax}
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
-	\setlength{\headheight}{50pt}
+	\setlength{\headheight}{70pt}
 	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
 	   contents = {\getdefaultbggraphic}}
 }
@@ -70,6 +71,29 @@
 	\renewcommand{\footrulewidth}{0pt}
 	\setlength{\headheight}{0pt}
 	\backgroundsetup{contents = {}}
+}
+\fancypagestyle{lightning} {
+	\fancyhead[L]{\vspace*{3em}\makeabstractheader}
+	\fancyhead[R]{\makeabstractcredits}
+	\fancyfoot{}
+	\fancyfoot[C]{\makebox[\textwidth][c]{--- {\thepage} ---}}
+	\fancyhfoffset[r]{\dimexpr+0.2cm\relax}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\setlength{\headheight}{50pt}
+	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
+	   contents = {\getdefaultbggraphic}}
+
+	\fancyhead[L]{\vspace*{3em}\makeabstractheader}
+	\fancyhead[R]{\makeabstractcredits}
+	\fancyfoot{}
+	\fancyfoot[C]{\makebox[\textwidth][c]{--- {\thepage} ---}}
+	\fancyhfoffset[r]{\dimexpr+0.2cm\relax}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\setlength{\headheight}{50pt}
+	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
+		 contents = {\getdefaultbggraphic}}
 }
 \pagestyle{default}
 

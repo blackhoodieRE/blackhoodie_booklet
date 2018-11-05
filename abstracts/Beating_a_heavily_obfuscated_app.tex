@@ -1,0 +1,14 @@
+\def\abstracttitle{Beating a heavily obfuscated app}
+\def\abstractcomment{Regular Talk}
+\def\abstractowner{Laura Tich and Evelyn Kilel}
+
+\thispagestyle{abstract}
+
+Obfuscation makes the source code unavailable which triggers the need to reverse engineer binaries as well as examine other file types in order to understand how they work and analyze their weak points. Reverse engineering an android application gives an understanding of how the application really works in the background and how it interacts with the actual device. This knowledge would assist in the process of discovery vulnerabilities that exist in the code and are not obvious. Additionally, some vulnerabilities are more visible in binary code than in source, so reverse engineering will find them first.
+
+In this session, we will look at reverse engineering in penetration testing using a Frida especially for heavily obfuscated mobile applications that have complex obfuscation:
+Use of Magisk to check if root detection is enabled and all methods including renaming binaries (Magisk creates random names to any modules including hiding specific apps) proving very hard to decompile the applications.
+Enter DBI  using Frida.re, dump the memory using Fridump and parse the readable strings to a file. As a Dynamic Binary Instrumentation (DBI) tool, Frida can enumerate the loaded modules and the classes on the application.
+Search through the file using normal keywords to find the obfuscation method/library that works.
+
+We will also analyze all levels from a systems view down to individual functions which include how the app interacts with its processing and networking environment, the trust boundaries between components, and relevant lines of code. The process can uncover malware hidden in a seemingly legitimate application. We will do a step by step process of retrieving the APK file from google play store or the device itself to patching.
