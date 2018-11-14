@@ -2,6 +2,7 @@
 \usepackage[a5paper]{geometry}
 
 \usepackage[x11names]{xcolor}
+\usepackage[explicit]{titlesec}
 \usepackage{environ}
 \usepackage{xcolor}
 \usepackage{xparse}
@@ -22,6 +23,8 @@
     \fi
 }
 
+\titleformat{\section}
+  {\normalfont}{\thesection}{1em}{\LARGE\color{special!95!black}\textbf{#1}}
 
 \setlength{\parskip}{0em}
 \setlength{\parindent}{0em}
@@ -67,30 +70,6 @@
 	\setlength{\headheight}{0pt}
 	\backgroundsetup{contents = {}}
 }
-\fancypagestyle{lightning} {
-	\fancyhead[L]{\vspace*{3em}\makeabstractheader}
-	\fancyhead[R]{\makeabstractcredits}
-	\fancyfoot{}
-	\fancyfoot[C]{\makebox[\textwidth][c]{--- {\thepage} ---}}
-	\fancyhfoffset[r]{\dimexpr+0.2cm\relax}
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
-	\setlength{\headheight}{50pt}
-	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
-	   contents = {\getdefaultbggraphic}}
-
-	\fancyhead[L]{\vspace*{3em}\makeabstractheader}
-	\fancyhead[R]{\makeabstractcredits}
-	\fancyfoot{}
-	\fancyfoot[C]{\makebox[\textwidth][c]{--- {\thepage} ---}}
-	\fancyhfoffset[r]{\dimexpr+0.2cm\relax}
-	\renewcommand{\headrulewidth}{0pt}
-	\renewcommand{\footrulewidth}{0pt}
-	\setlength{\headheight}{50pt}
-	\backgroundsetup{opacity = 1, scale = 1, angle = 0,
-		 contents = {\getdefaultbggraphic}}
-}
-\pagestyle{default}
 
 \title{Reverse Engineering Bootcamp BLACKHOODIE 4}
 \author{barbie}
