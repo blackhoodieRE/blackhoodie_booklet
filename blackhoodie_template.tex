@@ -1,4 +1,4 @@
-\documentclass[10pt,twoside]{report}
+\documentclass[10pt]{report}
 \usepackage[a5paper]{geometry}
 
 \usepackage[x11names]{xcolor}
@@ -12,21 +12,16 @@
 \usepackage{ifoddpage}
 \usepackage{fontawesome}
 \usepackage{pgfpages}
-
 \usepackage{fontspec}
 \setmainfont{[Fixedsys_Excelsior.ttf]}
 
 \newcommand{\getdefaultbggraphic}{
-	\ifdefined\nobackground
-	\else
-		\checkoddpage
-		\ifoddpage
-	   		\includegraphics[trim = 0 3mm 3mm 3mm,clip,width = \paperwidth,height = \paperheight, keepaspectratio]{images/abstractbackground_right.pdf}
-		\else
-	   		\includegraphics[trim = 3mm 3mm 0 3mm,clip,width = \paperwidth,height = \paperheight, keepaspectratio]{images/abstractbackground_left.pdf}
-		\fi
-	\fi
+    \ifdefined\nobackground
+    \else
+	\includegraphics{images/banner_a5.png}
+    \fi
 }
+
 
 \setlength{\parskip}{0em}
 \setlength{\parindent}{0em}
